@@ -39,6 +39,13 @@ pub struct TextureWebp {
     pub source: Index<image::Image>,
 }
 
+#[cfg(feature = "KHR_texture_basisu")]
+#[derive(Clone, Debug, Deserialize, Serialize, Validate)]
+pub struct TextureBasisu {
+    /// The index of the image used by this texture.
+    pub source: Index<image::Image>,
+}
+
 #[derive(Clone, Debug, Default, Deserialize, Serialize, Validate)]
 /// Reference to a `Texture`.
 pub struct Info {
